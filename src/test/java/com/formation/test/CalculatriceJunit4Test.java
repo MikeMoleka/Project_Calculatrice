@@ -12,7 +12,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.formation.calculatrices.Calculatrice;
-import com.formation.interfaces.CalculatriceInterface;
 
 /**
  * @author mengbaka
@@ -33,19 +32,25 @@ public class CalculatriceJunit4Test {
 	
 	@Test
 	public void division() {
-		assertEquals(0.5, calculatriceInterface.division(1, 2), 0.0);
-		assertEquals(0.0, calculatriceInterface.division(1, 0), 0.0);
-		assertEquals(0.0, calculatriceInterface.division(1, -2), 0.0);
+		
+		calculatriceInterface.division(1, 2);
+		assertEquals(0.5, calculatriceInterface.getDivision(), 0.0);
+		calculatriceInterface.division(1, 0);
+		assertEquals(0.0, calculatriceInterface.getDivision(), 0.0);
+		calculatriceInterface.division(1, -2);
+		assertEquals(0.0, calculatriceInterface.getDivision(), 0.0);
 	}
 	
 	@Test
 	public void addition() {
-		assertEquals(15.0, calculatriceInterface.addition(7.0, 8.0), 0.0);
+		calculatriceInterface.addition(7.0, 8.0);
+		assertEquals(15.0, calculatriceInterface.getAddition(), 0.0);
 	}
 	
 	@Test
 	public void multiplication() {
-		assertEquals(42.0, calculatriceInterface.multiplication(6.0, 7.0), 0.0);
+		calculatriceInterface.multiplication(6.0, 7.0);
+		assertEquals(42.0, calculatriceInterface.getMultiplication(), 0.0);
 	}
 	
 	@Test

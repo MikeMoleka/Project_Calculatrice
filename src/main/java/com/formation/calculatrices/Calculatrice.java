@@ -15,7 +15,34 @@ import com.formation.interfaces.CalculatriceInterface;
 public class Calculatrice implements CalculatriceInterface{
 	
 	private List<Integer> tab = new ArrayList<Integer>();
+	private double division;
+	private double addition;
+	private double multiplication;
 	
+	public double getMultiplication() {
+		return multiplication;
+	}
+
+	public void setMultiplication(double multiplication) {
+		this.multiplication = multiplication;
+	}
+
+	public double getAddition() {
+		return addition;
+	}
+
+	public void setAddition(double addition) {
+		this.addition = addition;
+	}
+
+	public double getDivision() {
+		return division;
+	}
+
+	public void setDivision(double division) {
+		this.division = division;
+	}
+
 	public List<Integer> getTab() {
 		return tab;
 	}
@@ -26,20 +53,21 @@ public class Calculatrice implements CalculatriceInterface{
 		}
 	}
 
-	public double division(double a, double b) {
+	public void division(double a, double b) {
 		
 		if (b > 0) {
-			return a / b;
+			this.setDivision(a / b);
+		} else {
+			this.setDivision(0);
 		}
-		return 0;
 	}
 	
-	public double addition(double a, double b) {
-		return a + b;
+	public void addition(double a, double b) {
+		this.setAddition(a + b);
 	}
 	
-	public double multiplication(double a, double b) {
-		return a * b;
+	public void multiplication(double a, double b) {
+		this.setMultiplication(a * b);
 	}
 	
 	public double moyenne() {
