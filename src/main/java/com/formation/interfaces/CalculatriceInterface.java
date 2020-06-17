@@ -1,7 +1,5 @@
 package com.formation.interfaces;
 
-import java.util.List;
-
 public interface CalculatriceInterface {
 	
 	public double division(double a, double b);
