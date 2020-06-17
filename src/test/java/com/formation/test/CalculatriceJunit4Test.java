@@ -19,11 +19,16 @@ import com.formation.interfaces.CalculatriceInterface;
  *
  */
 public class CalculatriceJunit4Test {
-	private CalculatriceInterface calculatriceInterface;
+	private Calculatrice calculatriceInterface;
+	List<Integer> tab = new ArrayList<Integer>();
 	
 	@Before
 	public void init() {
 		calculatriceInterface = new Calculatrice();
+		
+		tab.add(3);
+		tab.add(6);
+		tab.add(3);
 	}
 	
 	@Test
@@ -45,15 +50,9 @@ public class CalculatriceJunit4Test {
 	
 	@Test
 	public void moyenne() {
-		List<Integer> tab1 = new ArrayList<Integer>();
-		List<Integer> tab2 = new ArrayList<Integer>();
-		
-		tab1.add(3);
-		tab1.add(6);
-		tab1.add(3);
-		
-		assertEquals(4.0, calculatriceInterface.moyenne(tab1),0.0);
-		assertEquals(0.0, calculatriceInterface.moyenne(tab2),0.0);
+		assertEquals(0.0, calculatriceInterface.moyenne(),0.0);
+		calculatriceInterface.setTab(tab);
+		assertEquals(4.0, calculatriceInterface.moyenne(),0.0);
 	}
 
 }
