@@ -14,13 +14,13 @@ import com.formation.interfaces.CalculatriceInterface;
  */
 public class Calculatrice implements CalculatriceInterface{
 	
-	private List<Integer> tab;
+	private List<Double> tab;
 	private double division;
 	private double addition;
 	private double multiplication;
 	
 	public Calculatrice() {
-		this.tab = new ArrayList<Integer>();
+		this.tab = new ArrayList<Double>();
 	}
 	
 	public double getMultiplication() {
@@ -47,11 +47,11 @@ public class Calculatrice implements CalculatriceInterface{
 		this.division = division;
 	}
 
-	public List<Integer> getTab() {
+	public List<Double> getTab() {
 		return tab;
 	}
 
-	public void setTab(List<Integer> tab) {
+	public void setTab(List<Double> tab) {
 		if (!tab.isEmpty()) {
 			this.tab = tab;
 		}

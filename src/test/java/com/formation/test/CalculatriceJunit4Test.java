@@ -19,15 +19,15 @@ import com.formation.calculatrices.Calculatrice;
  */
 public class CalculatriceJunit4Test {
 	private Calculatrice calculatriceInterface;
-	List<Integer> tab = new ArrayList<Integer>();
+	List<Double> tab = new ArrayList<Double>();
 	
 	@Before
 	public void init() {
 		calculatriceInterface = new Calculatrice();
 		
-		tab.add(3);
-		tab.add(6);
-		tab.add(3);
+		tab.add(3.0);
+		tab.add(6.0);
+		tab.add(3.0);
 	}
 	
 	@Test
